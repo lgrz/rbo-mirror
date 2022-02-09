@@ -1,0 +1,35 @@
+# MAKEDEPENDS
+
+rbo.o: rbo.h sset.h hashset.h
+rbo_main.o: args.h metric.h log.h rbocalc.h aocalc.h taucalc.h util.h
+rbo_main.o: strarr.h
+hashset.o: hashset.h hashset_private.h
+sset.o: sset.h hashset.h khash.h
+rnkf.o: rnkf.h
+rnkf_pr.o: rnkf_pr.h
+log.o: log.h
+args.o: args.h metric.h log.h
+rbocalc.o: rbocalc.h rnkf.h rnkf_pr.h rbo.h sset.h hashset.h log.h
+ao.o: ao.h sset.h hashset.h
+aocalc.o: aocalc.h rnkf_pr.h ao.h sset.h hashset.h log.h
+util.o: util.h strarr.h log.h
+metric.o: metric.h
+rnkhash.o: rnkhash.h khash.h
+tau.o: tau.h rnkhash.h log.h
+strarr.o: strarr.h
+taucalc.o: taucalc.h tau.h strarr.h util.h
+test/tutil.o: test/tutil.h
+test/test_rbo_base.o: rbo.h sset.h hashset.h
+test/test_sset.o: sset.h hashset.h
+test/test_rbo_extr.o: rbo.h sset.h hashset.h
+test/test_rnkf.o: rnkf.h
+test/test_args.o: metric.h args.h metric.h log.h
+test/test_rbocalc.o: rbocalc.h test/tutil.h
+test/test_ao.o: ao.h sset.h hashset.h
+test/test_aocalc.o: test/tutil.h log.h aocalc.h
+test/test_rnkhash.o: rnkhash.h
+test/test_tau.o: tau.h
+test/test_strarr.o: strarr.h test/tutil.h
+test/test_read_lines.o: util.h strarr.h strarr.h log.h test/tutil.h
+test/test_taucalc.o: taucalc.h test/tutil.h
+test/test_cli.o: test/tutil.h metric.h log.h

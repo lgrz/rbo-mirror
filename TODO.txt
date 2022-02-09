@@ -1,0 +1,4 @@
+Mon Apr  4 09:29:32 EST 2011:
+
+* Move to autotools.
+* Proper versioning (currently at version 0.1.1)
